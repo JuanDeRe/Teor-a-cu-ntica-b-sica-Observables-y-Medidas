@@ -12,17 +12,21 @@ Este repositorio contiene una implementación en Python de un simulador cuántic
 
 ## Instalación de dependencias
 
-Este proyecto utiliza la librería `numpy` para realizar cálculos matriciales. Si no la tienes instalada, puedes hacerlo con:
+Este proyecto utiliza la librería `numpy` y `matplotlib` para realizar cálculos matriciales. Si no la tienes instalada, puedes hacerlo con:
 
 ```sh
 pip install numpy
+```
+
+```sh
+pip install matplotlib
 ```
 
 ## Contenido del repositorio
 
 El código está organizado en los siguientes notebooks de Jupyter:
 
-### **1. Simulador Cuántico (`Simulador.ipynb`)**
+### 1. **Simulador Cuántico (Simulador.ipynb)**
 Este notebook implementa la clase principal para la simulación de sistemas cuánticos discretos. Incluye:
 - Estado cuántico y normalización.
 - Medición y cálculo de probabilidades.
@@ -30,19 +34,25 @@ Este notebook implementa la clase principal para la simulación de sistemas cuá
 - **Ejemplo 1**: Cálculo de la probabilidad en cada posición.
 - **Ejemplo 2**: Probabilidad de transición entre dos estados.
 
-### **2. Retos de Programación (`Retos Programacion.ipynb`)**
-Contiene la resolución de los siguientes retos de programación:
-1. **Probabilidad de Transición** entre dos estados cuánticos.
-2. **Media y Varianza de un Observable** aplicando operadores hermitianos.
-3. **Valores Propios y Probabilidad de Colapsar** en los estados propios de un operador.
-4. **Evolución del Estado Cuántico** con una serie de operadores unitarios.
+### 2. **Discusión de Ejercicios (Discusion_ejercicios.ipynb)**
+Contiene una explicación detallada de problemas fundamentales en mecánica cuántica y su resolución.
 
-## Cómo ejecutar los notebooks
+### 3. **Problemas Modelados (problemas_modelados.ipynb)**
+Incluye problemas resueltos utilizando el simulador y su aplicación en situaciones físicas concretas.
 
-Para ejecutar los notebooks, simplemente abre los archivos Simulador.ipynb o Retos Programacion.ipynb en Jupyter Notebook y corre cada bloque de código por separado.
+### 4. **Retos de Programación (Retos Programacion.ipynb)**
+Desafíos adicionales para profundizar en la implementación de algoritmos cuánticos.
 
-## Notas
+## Uso del Simulador
 
-- Todos los cálculos se realizan en el espacio de números complejos.
-- Se asume que los operadores de evolución son matrices unitarias de tamaño compatible con el estado cuántico.
+Para utilizar el simulador, simplemente importa la clase correspondiente y define un estado cuántico inicial. Por ejemplo:
+
+    import numpy as np
+    from simulador import SistemaCuantico
+
+    estado_inicial = np.array([[1], [0]])
+    sistema = SistemaCuantico(estado_inicial)
+
+Puedes ejecutar los notebooks en Jupyter Notebook con los distintos ejemplos y problemas planteados.
+
 
